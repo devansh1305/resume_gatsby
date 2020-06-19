@@ -1,0 +1,27 @@
+[
+  {
+    "icon": "../images/skills/web.png",
+    "name": "Web Design & Development",
+    "tech": "HTML/CSS/Javascript/ReactJS/ASP.NET/AWS/Node.js"
+  },
+  {
+    "icon": "../images/skills/script.png",
+    "name": "Scripting",
+    "tech": "Python/Bash/PowerShell"
+  },
+  {
+    "icon": "../images/skills/database.png",
+    "name": "Database Management System",
+    "tech": "MySQL/DynamoDB"
+  },
+  {
+    "icon": "../images/skills/tensorflow.png",
+    "name": "Machine Learning & Data Mining",
+    "tech": "Scikit-Learn/TensorFlow/R"
+  },
+  {
+    "icon": "../images/skills/gears.png",
+    "name": "Languages and Tools",
+    "tech": "C/C++/C#/Dockers/ARM/Flex & Bison"
+  }
+]

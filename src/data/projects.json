@@ -1,0 +1,33 @@
+[
+  {
+    "image": "../images/projects/TCP_UDP_screen_share.png",
+    "title": "Screen Share",
+    "description": "A simple Server/Client implementation of a screen sharing application done with Python3 which uses TCP and UDP protocol for data transfer.",
+    "tags": ["opensource", "python", "TCP", "UDP", "network protocols"],
+    "website": "https://github.com/devansh1305/TCP_UDP_ScreenShare",
+    "github": "https://github.com/devansh1305/TCP_UDP_ScreenShare"
+  },
+  {
+    "image": "../images/projects/happening_place.png",
+    "title": "Happening Place",
+    "description": "Happening Place is an app which allows you to effectively host events by allowing multiple members to simultaneously plan for a single event without any hassle. It also allows users to find relevant events around them.",
+    "tags": ["opensource","html", "css", "js", "AWS", "webdev"],
+    "website": "https://github.com/devansh1305/HappeningPlace"
+  },
+  {
+    "image": "../images/projects/discord_bot.png",
+    "title": "WOTbot (ongoing)",
+    "description": "A discord bot that allows users to check their profile in multiple games and also help them match-make with currently-online players (ongoing).",
+    "tags": ["opensource", "API", "node.js", "algorithms", "data_mining", "webhooks"],
+    "website": "https://github.com/devansh1305/WOTbot",
+    "github": "https://github.com/devansh1305/WOTbot"
+  },
+  {
+    "image": "../images/projects/client-server.png",
+    "title": "HTTP Webserver",
+    "description": "Simple HTTP Server implemented in both pyhton3 and C++ and allows multiple clients to retrieve information from server. Uses TCP protocol.",
+    "tags": ["opensource", "networks", "C++", "python3", "TCP protocol"],
+    "website": "https://github.com/devansh1305/simpleHTTPserver",
+    "github": "https://github.com/devansh1305/simpleHTTPserver"
+  }
+]

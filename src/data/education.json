@@ -1,0 +1,14 @@
+[
+  {
+    "icon": "../images/education/purdue_logo.png",
+    "title": "Purdue University",
+    "subtitle": "Bachelor's Degree in Computer Science",
+    "period": "2017 - 2021"
+  },
+  {
+    "icon": "../images/education/dps.png",
+    "title": "Delhi Public School, Doha, Qatar",
+    "subtitle": "High School, CBSE",
+    "period": "2007 - 2017"
+  }
+]

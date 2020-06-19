@@ -1,0 +1,26 @@
+[
+  {
+    "icon": "../images/work/purdue.png",
+    "title": "Purdue CS URA",
+    "subtitle": "Undergraduate Research Assistant",
+    "period": "May '20 - Present",
+    "location": "West Lafayette, Indianna, US",
+    "specialization": "Python"
+  },
+  {
+    "icon": "../images/work/purdue.png",
+    "title": "Purdue University",
+    "subtitle": "Software Engineer Intern",
+    "period": "May '19 - Aug '19",
+    "location": "West Lafayette, Indianna, US",
+    "specialization": "ASP .NET, reactJS, C#, MVC"
+  },
+  {
+    "icon": "../images/work/purdue.png",
+    "title": "Purdue CS UTA",
+    "subtitle": "Undergraduate Teaching Assistant for CS252",
+    "period": "Jan '19 - May '19",
+    "location": "West Lafayette, Indianna, US",
+    "specialization": "C++, Bash, GDB, JavaScript, HTML, CSS"
+  }
+]
