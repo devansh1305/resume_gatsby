@@ -15,12 +15,12 @@
     "website": "https://github.com/devansh1305/HappeningPlace"
   },
   {
-    "image": "../images/projects/discord_bot.png",
-    "title": "WOTbot (ongoing)",
-    "description": "A discord bot that allows users to check their profile in multiple games and also help them match-make with currently-online players (ongoing).",
-    "tags": ["opensource", "API", "node.js", "algorithms", "data_mining", "webhooks"],
-    "website": "https://github.com/devansh1305/WOTbot",
-    "github": "https://github.com/devansh1305/WOTbot"
+    "image": "../images/projects/resume_gatsby.png",
+    "title": "Gatsby Portfolio",
+    "description": "Online portfolio made using GatsbyJS",
+    "tags": ["opensource","html", "css", "js", "gatsby", "webdev"],
+    "website": "https://github.com/devansh1305/resume_gatsby",
+    "github": "https://github.com/devansh1305/resume_gatsby"
   },
   {
     "image": "../images/projects/client-server.png",
@@ -29,5 +29,13 @@
     "tags": ["opensource", "networks", "C++", "python3", "TCP protocol"],
     "website": "https://github.com/devansh1305/simpleHTTPserver",
     "github": "https://github.com/devansh1305/simpleHTTPserver"
+  },
+  {
+    "image": "../images/projects/discord_bot.png",
+    "title": "WOTbot (ongoing)",
+    "description": "A discord bot that allows users to check their profile in multiple games and also help them match-make with currently-online players (ongoing).",
+    "tags": ["opensource", "API", "node.js", "algorithms", "data_mining", "webhooks"],
+    "website": "https://github.com/devansh1305/WOTbot",
+    "github": "https://github.com/devansh1305/WOTbot"
   }
 ]
