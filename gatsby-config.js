@@ -11,6 +11,8 @@ module.exports = {
     description: `Everyone needs their own little spot on the interwebs, and this is mine. Welcome to my resume, on the web!`,
     author: `Devansh Panirwala`,
     siteUrl: `https://www.cs.purdue.edu/homes/dpanirwa/`,
+    gverif: `google-site-verification`,
+    gverif_con: `YnW-ie7l1fG3b2TeWnXxpItxbTEjEnO8HAkuBrCwLyA`
   },
   plugins: [
     {

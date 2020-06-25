@@ -10,6 +10,8 @@ const SEO = () => {
           title
           description
           author
+          gverif
+          gverif_con
         }
       }
       file(relativePath: { eq: "share.png" }) {
@@ -29,6 +31,10 @@ const SEO = () => {
       defer={false}
       title={title}
       meta={[
+        {
+          name: `google-site-verification`,
+          content: `YnW-ie7l1fG3b2TeWnXxpItxbTEjEnO8HAkuBrCwLyA`
+        },
         {
           name: `description`,
           content: description,
