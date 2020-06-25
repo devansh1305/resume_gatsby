@@ -33,7 +33,7 @@ const SEO = () => {
       meta={[
         {
           name: `google-site-verification`,
-          content: `YnW-ie7l1fG3b2TeWnXxpItxbTEjEnO8HAkuBrCwLyA`
+          content: `rXZTKLbRIgbXS13zv22C8kvBth78JJu9YiJpC2Nhyf8`
         },
         {
           name: `description`,

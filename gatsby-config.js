@@ -12,7 +12,7 @@ module.exports = {
     author: `Devansh Panirwala`,
     siteUrl: `https://www.cs.purdue.edu/homes/dpanirwa/`,
     gverif: `google-site-verification`,
-    gverif_con: `YnW-ie7l1fG3b2TeWnXxpItxbTEjEnO8HAkuBrCwLyA`
+    gverif_con: `rXZTKLbRIgbXS13zv22C8kvBth78JJu9YiJpC2Nhyf8`
   },
   plugins: [
     {
