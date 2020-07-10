@@ -82,11 +82,11 @@ const Contact = () => {
             name="name"
             type="text"
             ref={nameRef}
-            placeholder="Regina Phalange"
+            placeholder="Michael Scott"
             onChange={e => setName(e.target.value)}
             className="border-2 border-gray-700 focus:border-gray-300 px-4 py-2 text-lg bg-transparent duration-200 focus:outline-none"
           />
-          <p className="text-xs mt-2">The one where you tell me your name</p>
+          <p className="text-xs mt-2">Enter you name</p>
         </label>
 
         <label htmlFor="email" className="mt-2 w-4/5 md:w-2/3 flex flex-col">
@@ -97,12 +97,12 @@ const Contact = () => {
             name="email"
             type="email"
             ref={emailRef}
-            placeholder="regina@example.com"
+            placeholder="scott@theoffice.com"
             onChange={e => setEmail(e.target.value)}
             className="border-2 border-gray-700 focus:border-gray-300 px-4 py-2 text-lg bg-transparent duration-200 focus:outline-none"
           />
           <p className="text-xs mt-2">
-            The one where you tell me how I can contact you back
+            Enter your email
           </p>
         </label>
 
@@ -119,7 +119,7 @@ const Contact = () => {
             className="border-2 border-gray-700 focus:border-gray-300 px-4 py-2 text-lg bg-transparent duration-200 focus:outline-none"
           />
           <p className="text-xs mt-2">
-            The one where you tell me what I can do to help you
+            How can I help you?
           </p>
         </label>
 

@@ -12,9 +12,21 @@ module.exports = {
     author: `Devansh Panirwala`,
     siteUrl: `https://www.cs.purdue.edu/homes/dpanirwa/`,
     gverif: `google-site-verification`,
-    gverif_con: `rXZTKLbRIgbXS13zv22C8kvBth78JJu9YiJpC2Nhyf8`
+    gverif_con: `rXZTKLbRIgbXS13zv22C8kvBth78JJu9YiJpC2Nhyf8`,
+    alternatesiteUrl: `https://www.devanshpanirwala.ml/`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        // your google analytics tracking id
+        trackingId: `UA-171598173-1`,
+        // Puts tracking script in the head instead of the            body
+        head: true,
+        // enable ip anonymization
+        anonymize: false,
+      },
+    },
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {

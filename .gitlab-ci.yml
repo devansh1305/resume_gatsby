@@ -4,6 +4,8 @@ pages:
   script:
   - npm install
   - npm install gatsby-cli
+  - npm install --save gatsby-plugin-gtag
+  - npm audit fix
   - node_modules/.bin/gatsby build
   artifacts:
     paths:
