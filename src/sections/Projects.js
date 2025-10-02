@@ -1,7 +1,6 @@
-import Tooltip from "@material-ui/core/Tooltip";
+import Tooltip from "@mui/material/Tooltip";
 import { graphql, useStaticQuery } from "gatsby";
-import GatsbyImage from "gatsby-image";
-import { OutboundLink } from "gatsby-plugin-google-analytics";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import React from "react";
 import Button from "../components/Button";
 import Heading from "../components/Heading";
@@ -22,9 +21,7 @@ const Projects = () => {
             github
             image {
               childImageSharp {
-                fluid(maxWidth: 400, quality:100, webpQuality: 90) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+                gatsbyImageData(width: 400, quality: 100, placeholder: BLURRED)
               }
             }
           }
@@ -46,7 +43,7 @@ const Projects = () => {
               animationDelay: `${index * 300 + 300}ms`,
             }}
           >
-            <OutboundLink
+            <a
               href={node.website || node.github}
               target="_blank"
               rel="noopener noreferrer"
@@ -55,10 +52,11 @@ const Projects = () => {
               <FaLink className="absolute" color="#FFF" size="5rem" />
               <GatsbyImage
                 className="absolute w-full h-full object-cover rounded-lg hover:opacity-50 duration-200"
-                {...node.image.childImageSharp}
+                image={getImage(node.image)}
+                alt={node.title}
               />
               <span className="sr-only">{node.title}</span>
-            </OutboundLink>
+            </a>
             <h5 className="mt-4 font-semibold">{node.title}</h5>
             <p className="mt-2 pb-5 text-sm text-justify">{node.description}</p>
 
@@ -73,7 +71,7 @@ const Projects = () => {
             <div className="flex mt-2">
               {node.website && (
                 <Tooltip title="Go to Website" placement="bottom">
-                  <OutboundLink
+                  <a
                     href={node.website}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -81,13 +79,13 @@ const Projects = () => {
                   >
                     <FaLink />
                     <span className="sr-only">Go to Website</span>
-                  </OutboundLink>
+                  </a>
                 </Tooltip>
               )}
 
               {node.github && (
                 <Tooltip title="Go to GitHub Repo" placement="bottom">
-                  <OutboundLink
+                  <a
                     href={node.github}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -95,7 +93,7 @@ const Projects = () => {
                   >
                     <FaGithub />
                     <span className="sr-only">Go to GitHub Repo</span>
-                  </OutboundLink>
+                  </a>
                 </Tooltip>
               )}
             </div>

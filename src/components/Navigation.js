@@ -1,6 +1,6 @@
-import Tooltip from "@material-ui/core/Tooltip";
+import Tooltip from "@mui/material/Tooltip";
 import { graphql, useStaticQuery } from "gatsby";
-import GatsbyImage from "gatsby-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import React, { useContext, useEffect, useState } from "react";
 import { animateScroll as scroll, scroller } from "react-scroll";
 import ThemeContext from "../context/ThemeContext";
@@ -15,9 +15,7 @@ const Navigation = () => {
     query {
       icon: file(relativePath: { eq: "icon.png" }) {
         childImageSharp {
-          fixed(width: 64, height: 64) {
-            ...GatsbyImageSharpFixed_withWebp
-          }
+          gatsbyImageData(width: 64, height: 64, placeholder: BLURRED)
         }
       }
     }
@@ -65,7 +63,11 @@ const Navigation = () => {
     >
       <Tooltip title="Go to Top" placement="right" arrow>
         <div className="flex-center cursor-pointer" onClick={scrollToTop}>
-          <GatsbyImage className="grayscale" {...data.icon.childImageSharp} />
+          <GatsbyImage
+            className="grayscale"
+            image={getImage(data.icon)}
+            alt="Logo"
+          />
         </div>
       </Tooltip>
 

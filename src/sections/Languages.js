@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import Typist from "react-typist";
+import { TypeAnimation } from "react-type-animation";
 import Heading from "../components/Heading";
 import { FaSignLanguage } from "../components/Icons";
 import styles from "./Languages.module.css";
 
 const Languages = () => {
-  const [typistIndex, setTypistIndex] = useState(0);
   const data = useStaticQuery(graphql`
     {
       allLanguagesJson {
@@ -22,31 +21,36 @@ const Languages = () => {
     }
   `);
 
+  // Create sequence for TypeAnimation
+  const sequence = data.allLanguagesJson.edges.flatMap(({ node }) => [
+    () => {
+      // This will be rendered as a custom component
+    },
+    node.text,
+    500,
+    `${node.text}\n${node.translation}`,
+    2000,
+    "",
+    300,
+  ]);
+
   return (
     <section id="languages">
       <Heading icon={FaSignLanguage} title="Languages" />
 
       <div className="h-48 md:h-40 lg:h-32 wow fadeIn">
-        <Typist
-          key={typistIndex}
-          avgTypingDelay={40}
-          cursor={{ show: false }}
-          onTypingDone={() => setTypistIndex(typistIndex + 1)}
-        >
-          {data.allLanguagesJson.edges.map(({ node }) => {
-            return (
-              <div key={node.id}>
-                <h2 className="text-4xl pb-2">{node.text}</h2>
-                <span className="italic">{node.translation}</span>
-                <Typist.Backspace
-                  count={node.text.length + node.translation.length}
-                  delay={2000}
-                />
-                <Typist.Delay ms={300} />
-              </div>
-            );
-          })}
-        </Typist>
+        <TypeAnimation
+          sequence={sequence}
+          wrapper="div"
+          speed={50}
+          style={{
+            whiteSpace: "pre-line",
+            fontSize: "2.25rem",
+            paddingBottom: "0.5rem",
+          }}
+          repeat={Infinity}
+          cursor={false}
+        />
       </div>
 
       <div className="mt-1 flex flex-wrap">

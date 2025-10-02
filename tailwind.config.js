@@ -1,9 +1,11 @@
-const { colors } = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
 
 module.exports = {
-  purge: {
-    enabled: false,
-  },
+  content: [
+    "./src/pages/**/*.{js,jsx,ts,tsx}",
+    "./src/components/**/*.{js,jsx,ts,tsx}",
+    "./src/sections/**/*.{js,jsx,ts,tsx}",
+  ],
   theme: {
     container: {
       center: true,

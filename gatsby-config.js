@@ -17,14 +17,15 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-gtag`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        // your google analytics tracking id
-        trackingId: `UA-171598173-1`,
-        // Puts tracking script in the head instead of the            body
-        head: true,
-        // enable ip anonymization
-        anonymize: false,
+        trackingIds: [`UA-171598173-1`],
+        gtagConfig: {
+          anonymize_ip: false,
+        },
+        pluginConfig: {
+          head: true,
+        },
       },
     },
     {
@@ -42,36 +43,20 @@ module.exports = {
         policy: [{ userAgent: `*`, allow: `/` }],
       },
     },
-    `gatsby-plugin-eslint`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Devansh Panirwala's Resume on the Web`,
         short_name: `Resume on the Web`,
-        start_url: `https://www.cs.purdue.edu/homes/dpanirwa/`,
-        background_color: fullConfig.theme.colors.white,
-        theme_color: fullConfig.theme.colors.white,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#ffffff`,
         display: `standalone`,
         icon: `src/images/icon.png`,
-        cache_busting_mode: `none`,
       },
     },
-    {
-      resolve: `gatsby-plugin-offline`,
-      options: {
-        workboxConfig: {
-          globPatterns: [`**/*`],
-        },
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`Fira Sans:400,600`],
-        display: `swap`,
-      },
-    },
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -107,13 +92,6 @@ module.exports = {
             ? [require(`cssnano`)]
             : []),
         ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-purgecss`,
-      options: {
-        tailwind: true,
-        purgeOnly: [`src/css/tailwind.css`],
       },
     },
   ],
